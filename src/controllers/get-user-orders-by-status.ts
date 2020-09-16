@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { Order } from '../models';
-import { OrderStatusQuery, UserRequestParams } from '../requests';
+import { Order } from '../models/order';
+import { OrderStatusQuery, UserRequestParams } from './requests';
 
 export const getUserOrdersByStatus = async (
   req: Request<UserRequestParams, unknown, unknown, OrderStatusQuery>,

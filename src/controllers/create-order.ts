@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
 import { v4 as uuid } from 'uuid';
-import { Order, OrderItem } from '../models';
-import { CreateOrderBody, UserRequestParams } from '../requests';
+import { Order } from '../models/order';
+import { OrderItem } from '../models/order-item';
+import { CreateOrderBody, UserRequestParams } from './requests';
 
 export const createOrder = async (
   req: Request<UserRequestParams, unknown, CreateOrderBody>,

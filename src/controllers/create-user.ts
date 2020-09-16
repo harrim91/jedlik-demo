@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { User } from '../models';
-import { CreateUserBody } from '../requests';
+import { User } from '../models/user';
+import { CreateUserBody } from './requests';
 
 export const createUser = async (
   req: Request<unknown, unknown, CreateUserBody>,

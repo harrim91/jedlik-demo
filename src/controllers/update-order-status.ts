@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
-import { Order } from '../models';
+import { Order } from '../models/order';
 import {
   OrderRequestParams,
   UserRequestParams,
   OrderStatusQuery,
-} from '../requests';
+} from './requests';
 
 export const updateOrderStatus = async (
   req: Request<
