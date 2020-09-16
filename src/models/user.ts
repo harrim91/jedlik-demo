@@ -1,5 +1,5 @@
 import * as jedlik from '@peak-ai/jedlik';
-import Joi from '@hapi/joi';
+import Joi from 'joi';
 import { config } from './config';
 import { Address, addressSchema } from './address';
 
@@ -27,10 +27,17 @@ const userSchema = Joi.object({
   addresses: Joi.array().items(addressSchema).max(10).required(),
 });
 
-export const User = new jedlik.Model<UserProps>(
+const User = new jedlik.Model<UserProps>(
   {
     table: 'ecommerce-store',
     schema: userSchema,
   },
   config
 );
+
+User.on('save', (user) => {
+  console.log('New user created!');
+  console.log(user?.toObject());
+});
+
+export { User };

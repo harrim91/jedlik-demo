@@ -1,5 +1,5 @@
 import * as jedlik from '@peak-ai/jedlik';
-import Joi from '@hapi/joi';
+import Joi from 'joi';
 import { config } from './config';
 
 type OrderItemProps = {
