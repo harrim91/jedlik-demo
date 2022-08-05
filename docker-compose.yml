@@ -10,7 +10,7 @@ services:
     depends_on:
       - dynamodb_local
     container_name: jedlik-demo-api
-    image: node:12-alpine
+    image: node:16-alpine
     volumes:
       - .:/usr/service
     working_dir: /usr/service

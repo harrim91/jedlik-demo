@@ -24,6 +24,6 @@ export const createUser = async (
     // * Success!
     res.status(201).json(user.toObject());
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({ error: (error as Error).message });
   }
 };

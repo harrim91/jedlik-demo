@@ -34,7 +34,7 @@ export const updateOrderStatus = async (
 
     res.status(200).json(order.toObject());
   } catch (error) {
-    if (error.message === 'Not Found') {
+    if ((error as Error).message === 'Not Found') {
       res.sendStatus(404);
     } else {
       res.sendStatus(500);

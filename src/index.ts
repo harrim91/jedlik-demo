@@ -53,4 +53,6 @@ app.get('/open-orders', getOpenOrders);
  */
 app.get('/order/:orderId', getOrderItems);
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log('localhost:3000');
+});

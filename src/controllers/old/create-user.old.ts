@@ -33,6 +33,6 @@ export const createUser = async (
 
     res.status(201).json(user);
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({ error: (error as Error).message });
   }
 };
